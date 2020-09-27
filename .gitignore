@@ -131,4 +131,4 @@ $RECYCLE.BIN/
 .DS_Store
 
 # Folder with tasks
-Tasks/
+Tasks/*.*
