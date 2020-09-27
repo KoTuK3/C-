@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01", "Task01\Task01.csproj", "{1766E6A7-C0ED-46C6-9E60-83984B485B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Access", "Test_Access\Test_Access.csproj", "{B644435E-2717-45FB-A7EF-539F420932C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02", "Task02\Task02.csproj", "{2117FD24-8C13-4500-AB8B-E23229373BF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1766E6A7-C0ED-46C6-9E60-83984B485B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1766E6A7-C0ED-46C6-9E60-83984B485B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1766E6A7-C0ED-46C6-9E60-83984B485B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1766E6A7-C0ED-46C6-9E60-83984B485B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B644435E-2717-45FB-A7EF-539F420932C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B644435E-2717-45FB-A7EF-539F420932C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B644435E-2717-45FB-A7EF-539F420932C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B644435E-2717-45FB-A7EF-539F420932C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2117FD24-8C13-4500-AB8B-E23229373BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2117FD24-8C13-4500-AB8B-E23229373BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2117FD24-8C13-4500-AB8B-E23229373BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2117FD24-8C13-4500-AB8B-E23229373BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A264F284-BE8D-4CA9-9E08-E479539A0D4A}
+	EndGlobalSection
+EndGlobal
