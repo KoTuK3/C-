@@ -10,6 +10,9 @@ namespace HT02_Task02
     {
         static void Main(string[] args)
         {
+            Rectangle r = new Rectangle(5, 6);
+            r.Print();
+            r.Draw();
         }
     }
 }
