@@ -22,15 +22,15 @@ namespace Task02
 
         public void PrintMarkProg()
         {
-            Console.WriteLine("Mark prog" + MarkProg);
+            Console.WriteLine("Mark prog: " + MarkProg);
         }
         public void PrintMarkAdmin()
         {
-            Console.WriteLine("Mark admin" + MarkAdmin);
+            Console.WriteLine("Mark admin: " + MarkAdmin);
         }
         public void PrintMarkDesign()
         {
-            Console.WriteLine("Mark design" + MarkDesign);
+            Console.WriteLine("Mark design: " + MarkDesign);
         }
         public delegate void PrintMark();
 
