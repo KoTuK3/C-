@@ -27,6 +27,14 @@ namespace Task03
             vehicles.Add(v);
         }
 
+        public void Print()
+        {
+            for (int i = 0; i < vehicles.Count; i++)
+            {
+                Console.WriteLine($"Car[{i+1}], Pos: {vehiclesPositions[i]}");
+            }
+        }
+
         public void Start()
         {
 
