@@ -36,5 +36,10 @@ namespace HT02_Task01
             }
             return false;
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
