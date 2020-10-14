@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D422531-C805-4638-BE9C-8E50AE0BCAAF}</ProjectGuid>
+    <ProjectGuid>{C202F89C-A1C2-44B1-B4FE-D49FE7D75381}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Task04</RootNamespace>
-    <AssemblyName>Task04</AssemblyName>
+    <RootNamespace>HT11_Task02</RootNamespace>
+    <AssemblyName>HT11_Task02</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Task04_Library\Task04_Library.csproj">
-      <Project>{30973d3a-741b-464d-908b-ec1ea5d0cd2a}</Project>
-      <Name>Task04_Library</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
