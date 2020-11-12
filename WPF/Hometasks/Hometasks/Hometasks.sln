@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HT01_Task01", "HT01_Task01\HT01_Task01.csproj", "{BBF0DD2F-F6B4-4C05-8805-8888910BC891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HT01", "HT01", "{A33B4CDF-871F-4E17-840D-52FA3251777F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF0DD2F-F6B4-4C05-8805-8888910BC891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF0DD2F-F6B4-4C05-8805-8888910BC891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF0DD2F-F6B4-4C05-8805-8888910BC891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF0DD2F-F6B4-4C05-8805-8888910BC891}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBF0DD2F-F6B4-4C05-8805-8888910BC891} = {A33B4CDF-871F-4E17-840D-52FA3251777F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77C99DB5-7E0A-40E4-B42C-98B3B2346B9B}
+	EndGlobalSection
+EndGlobal
