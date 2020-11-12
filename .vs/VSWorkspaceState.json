@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Lessons",
-    "\\Lessons\\Lesson14",
-    "\\Lessons\\Lesson14\\Task02"
+    "\\WomForms",
+    "\\WomForms\\Hometasks",
+    "\\WomForms\\Hometasks\\Hometasks",
+    "\\WomForms\\Hometasks\\Hometasks\\HT07_Task01"
   ],
-  "SelectedNode": "\\Lessons\\Lesson14",
+  "SelectedNode": "\\WomForms\\Hometasks\\Hometasks\\HT07_Task01\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
