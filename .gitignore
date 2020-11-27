@@ -6,6 +6,7 @@ Tasks/
 *.txt
 *.rar
 *.pdf
+Examples/
 
 # User-specific files
 *.suo
