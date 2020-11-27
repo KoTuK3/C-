@@ -1,0 +1,151 @@
+﻿<Window x:Class="L07_Task01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:L07_Task01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="1200">
+    <Window.Resources>
+        <Style x:Key="GreyBtn" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#b6b6b6"/>
+            <Setter Property="BorderBrush" Value="#000"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+        <Style x:Key="BoldFont" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        
+        <Style x:Key="GreenBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}" >
+            <Setter Property="Background" Value="#80f078"/>
+        </Style>
+        <Style x:Key="PinkBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#f07896"/>
+        </Style>
+        <Style x:Key="YellowBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#e7f078"/>
+        </Style>
+        <Style x:Key="BlueBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#78bff0"/>
+        </Style>
+        <Style x:Key="PurpleBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#dc78f0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"><Button Content="`"  Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   ><Button Content="1" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   ><Button Content="2" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="6" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" ><Button Content="3" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="8" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  ><Button Content="4" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="10" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Content="5" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="12" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Content="6" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="14" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Content="7" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="16" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Content="8" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="18" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  ><Button Content="9" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="20" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}"><Button Content="0" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="22" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Content="-" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="24" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Content="=" Style="{StaticResource BoldFont}"/></Border>
+        <Border Grid.Column="26" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"  ><Button Content="Backspace"/></Border>
+
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}"   ><Button Content="Tab"/></Border>
+        <Border Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   ><Button Style="{StaticResource BoldFont}" Content="q"/></Border>
+        <Border Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" ><Button Style="{StaticResource BoldFont}" Content="w"/></Border>
+        <Border Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  ><Button Style="{StaticResource BoldFont}" Content="e"/></Border>      
+        <Border Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="r"/></Border>      
+        <Border Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="t"/></Border>         
+        <Border Grid.Column="13" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="y"/></Border>      
+        <Border Grid.Column="15" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="u"/></Border>
+        <Border Grid.Column="17" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  ><Button Style="{StaticResource BoldFont}" Content="i"/></Border>
+        <Border Grid.Column="19" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}"><Button Style="{StaticResource BoldFont}" Content="o"/></Border>      
+        <Border Grid.Column="21" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="p"/></Border>      
+        <Border Grid.Column="23" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="["/></Border>      
+        <Border Grid.Column="25" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="]"/></Border>
+        <Border Grid.Column="27" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="\"/></Border>
+
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"   ><Button Content="Caps Lock"/></Border>
+        <Border Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   ><Button Style="{StaticResource BoldFont}" Content="a"/></Border>
+        <Border Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" ><Button Style="{StaticResource BoldFont}" Content="s"/></Border>
+        <Border Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  ><Button Style="{StaticResource BoldFont}" Content="d"/></Border> 
+        <Border Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="f"/></Border> 
+        <Border Grid.Column="12" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="g"/></Border> 
+        <Border Grid.Column="14" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="h"/></Border> 
+        <Border Grid.Column="16" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="j"/></Border>
+        <Border Grid.Column="18" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  ><Button Style="{StaticResource BoldFont}" Content="k"/></Border>
+        <Border Grid.Column="20" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}"><Button Style="{StaticResource BoldFont}" Content="l"/></Border> 
+        <Border Grid.Column="22" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content=";"/></Border> 
+        <Border Grid.Column="24" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="'"/></Border>
+        <Border Grid.Column="26" Grid.Row="2" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"  ><Button Content="Enter"/></Border>
+
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Style="{StaticResource GreyBtn}"   ><Button Content="Shift"/></Border>
+        <Border Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   ><Button Style="{StaticResource BoldFont}" Content="z"/></Border>
+        <Border Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" ><Button Style="{StaticResource BoldFont}" Content="x"/></Border>
+        <Border Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  ><Button Style="{StaticResource BoldFont}" Content="c"/></Border> 
+        <Border Grid.Column="11" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="v"/></Border>
+        <Border Grid.Column="13" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  ><Button Style="{StaticResource BoldFont}" Content="b"/></Border> 
+        <Border Grid.Column="15" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="n"/></Border> 
+        <Border Grid.Column="17" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}"><Button Style="{StaticResource BoldFont}" Content="m"/></Border>
+        <Border Grid.Column="19" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  ><Button Style="{StaticResource BoldFont}" Content=","/></Border>
+        <Border Grid.Column="21" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}"><Button Style="{StaticResource BoldFont}" Content="."/></Border>
+        <Border Grid.Column="23" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" ><Button Style="{StaticResource BoldFont}" Content="/"/></Border> 
+        <Border Grid.Column="25" Grid.Row="3" Grid.ColumnSpan="5" Style="{StaticResource GreyBtn}"  ><Button Content="Shift"/></Border> 
+        <Border Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  ><Button Content="Ctrl"/></Border> 
+        <Border Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  ><Button Content="Win"/></Border> 
+        <Border Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  ><Button Content="Alt"/></Border>     
+        <Border Grid.Column="9" Grid.Row="4" Grid.ColumnSpan="12" Style="{StaticResource GreyBtn}"  ><Button Content="Space"/></Border> 
+
+        <Border Grid.Column="21" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}"><Button Content="Alt"/></Border> 
+        <Border Grid.Column="24" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}"><Button Content="Win"/></Border> 
+        <Border Grid.Column="27" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}"><Button Content="Ctrl"/></Border> 
+        
+    </Grid>
+</Window>
