@@ -22,7 +22,6 @@ namespace HT01_Task01
     {
         public MainWindow()
         {
-            InitializeComponent();
         }
     }
 }
