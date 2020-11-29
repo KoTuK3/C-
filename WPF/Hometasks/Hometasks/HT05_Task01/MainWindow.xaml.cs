@@ -23,6 +23,7 @@ namespace HT05_Task01
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel();
         }
     }
 }

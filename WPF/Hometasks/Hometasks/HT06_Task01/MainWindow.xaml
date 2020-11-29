@@ -5,8 +5,301 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HT06_Task01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="400" Width="1200">
+
+    
+    <Window.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate" 
+                 TargetType="{x:Type Button}">
+            <Border Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{Binding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+        </ControlTemplate>
         
+        <Style x:Key="GreyBtn" TargetType="{x:Type Border}">
+            
+            <Setter Property="Background" Value="#b6b6b6"/>
+            <Setter Property="BorderBrush" Value="#000"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Margin" Value="2" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontSize" Value="24"/>
+
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty="FontSize">
+                                <DoubleAnimation From="24" To="15"
+                                         Duration="0:0:01"/>
+                                <DoubleAnimation From="15" To="24"
+                                         Duration="0:0:01"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="BoldFont" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="GreenBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}" >
+            <Setter Property="Background" Value="#80f078"/>
+        </Style>
+        <Style x:Key="PinkBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#f07896"/>
+        </Style>
+        <Style x:Key="YellowBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#e7f078"/>
+        </Style>
+        <Style x:Key="BlueBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#78bff0"/>
+        </Style>
+        <Style x:Key="PurpleBtn" BasedOn="{StaticResource ResourceKey=GreyBtn}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#dc78f0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}"  Content="`"  Style="{StaticResource BoldFont}" />
+        </Border>
+        <Border Grid.Column="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="1" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="2" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="6" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="3" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="8" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="4" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="10" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="5" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="12" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="6" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="14" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="7" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="16" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="8" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="18" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="9" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="20" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="0" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="22" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="-" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="24" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="=" Style="{StaticResource BoldFont}"/>
+        </Border>
+        <Border Grid.Column="26" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Backspace"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Tab"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="q"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="w"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="e"/>
+        </Border>
+        <Border Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="r"/>
+        </Border>
+        <Border Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="t"/>
+        </Border>
+        <Border Grid.Column="13" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="y"/>
+        </Border>
+        <Border Grid.Column="15" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="u"/>
+        </Border>
+        <Border Grid.Column="17" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="i"/>
+        </Border>
+        <Border Grid.Column="19" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="o"/>
+        </Border>
+        <Border Grid.Column="21" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="p"/>
+        </Border>
+        <Border Grid.Column="23" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="["/>
+        </Border>
+        <Border Grid.Column="25" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="]"/>
+        </Border>
+        <Border Grid.Column="27" Grid.Row="1" Grid.ColumnSpan="3" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="\"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Caps Lock"/>
+        </Border>
+        <Border Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="a"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="s"/>
+        </Border>
+        <Border Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="d"/>
+        </Border>
+        <Border Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="f"/>
+        </Border>
+        <Border Grid.Column="12" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="g"/>
+        </Border>
+        <Border Grid.Column="14" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="h"/>
+        </Border>
+        <Border Grid.Column="16" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="j"/>
+        </Border>
+        <Border Grid.Column="18" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="k"/>
+        </Border>
+        <Border Grid.Column="20" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="l"/>
+        </Border>
+        <Border Grid.Column="22" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content=";"/>
+        </Border>
+        <Border Grid.Column="24" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="'"/>
+        </Border>
+        <Border Grid.Column="26" Grid.Row="2" Grid.ColumnSpan="4" Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Enter"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" Style="{StaticResource GreyBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Shift"/>
+        </Border>
+        <Border Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"   >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="z"/>
+        </Border>
+        <Border Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="x"/>
+        </Border>
+        <Border Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="c"/>
+        </Border>
+        <Border Grid.Column="11" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="v"/>
+        </Border>
+        <Border Grid.Column="13" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource BlueBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="b"/>
+        </Border>
+        <Border Grid.Column="15" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="n"/>
+        </Border>
+        <Border Grid.Column="17" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PurpleBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="m"/>
+        </Border>
+        <Border Grid.Column="19" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PinkBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content=","/>
+        </Border>
+        <Border Grid.Column="21" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource YellowBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="."/>
+        </Border>
+        <Border Grid.Column="23" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource GreenBtn}" >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Style="{StaticResource BoldFont}" Content="/"/>
+        </Border>
+        <Border Grid.Column="25" Grid.Row="3" Grid.ColumnSpan="5" Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Shift"/>
+        </Border>
+        <Border Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Ctrl"/>
+        </Border>
+        <Border Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Win"/>
+        </Border>
+        <Border Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="3"  Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Alt"/>
+        </Border>
+        <Border Grid.Column="9" Grid.Row="4" Grid.ColumnSpan="12" Style="{StaticResource GreyBtn}"  >
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Space"/>
+        </Border>
+
+        <Border Grid.Column="21" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Alt"/>
+        </Border>
+        <Border Grid.Column="24" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Win"/>
+        </Border>
+        <Border Grid.Column="27" Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource GreyBtn}">
+            <Button Template="{StaticResource NoMouseOverButtonTemplate}" Content="Ctrl"/>
+        </Border>
+
     </Grid>
 </Window>

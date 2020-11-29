@@ -7,6 +7,91 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <CheckBox Name="IsAlpha" IsChecked="{Binding IsAlphaActive}" Content="A:" Margin="5,5,0,0"/>
+        <Slider Name="Alpha"
+                Grid.ColumnSpan="4"
+                Width="550"
+                HorizontalAlignment="Left" 
+                Minimum="0" Maximum="255" 
+                Margin="60,0,0,0"
+                IsSnapToTickEnabled="True" 
+                Value="{Binding Alpha, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <CheckBox Name="IsRed" IsChecked="{Binding IsRedActive}" Content="R:" Margin="5,35,0,0"/>
+        <Slider Name="Red"
+                Grid.ColumnSpan="4"
+                Width="550"
+                HorizontalAlignment="Left" 
+                Minimum="0" Maximum="255" 
+                Margin="60,30,0,0"
+                IsSnapToTickEnabled="True"
+                Value="{Binding Red, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <CheckBox Name="IsGreen" IsChecked="{Binding IsGreenActive}" Content="G:" Margin="5,65,0,0"/>
+        <Slider Name="Green"
+                Grid.ColumnSpan="4"
+                Width="550"
+                HorizontalAlignment="Left" 
+                Minimum="0" Maximum="255" 
+                Margin="60,60,0,0"
+                IsSnapToTickEnabled="True"
+                Value="{Binding Green, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <CheckBox Name="IsBlue" IsChecked="{Binding IsBlueActive}" Content="B:" Margin="5,95,0,0"/>
+        <Slider Name="Blue"
+                Grid.ColumnSpan="4"
+                Width="550"
+                HorizontalAlignment="Left" 
+                Minimum="0" Maximum="255" 
+                Margin="60,90,0,0"
+                IsSnapToTickEnabled="True"
+                Value="{Binding Blue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Border Grid.Column="4" Margin="5" CornerRadius="20">
+            <Border.Background>
+                <SolidColorBrush Color="{Binding Path=SelectedColor.Hex}"/>
+            </Border.Background>
+        </Border>
+
+        <Button Command="{Binding AddCommand}" Content="Add" Grid.Column="0" Grid.Row="1" Margin="20" />
+
+        <ListBox Grid.Row="2" 
+                 Grid.ColumnSpan="5" 
+                 ItemsSource="{Binding SelectedColors}"
+                 SelectedItem="{Binding Path=SelectedColor, Mode=OneWayToSource}">
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Path=Hex}" FontSize="18" FontWeight="Bold" />
+                        <Border Grid.Column="1" BorderThickness="3" Width="300">
+                            <Border.Background>
+                                <SolidColorBrush Color="{Binding Path=Hex}" />
+                            </Border.Background>
+                        </Border>
+                        <Button Grid.Column="2" Name="DeleteBtn" Content="Delete" Width="50" Command="{Binding Path=RemoveCommand}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
