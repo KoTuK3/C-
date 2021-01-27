@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Sales" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-CNPB2S9\SQLEXPRESS;Initial Catalog=Sales;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="L04_Task01.Properties.Settings" SettingsPropertyName="SalesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Client">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Association Name="Client_Sale" Member="Sales" ThisKey="Id" OtherKey="ClientId" Type="Sale" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sales" Member="Sales">
+    <Type Name="Sale">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SellerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Good" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Client_Sale" Member="Client" ThisKey="ClientId" OtherKey="Id" Type="Client" IsForeignKey="true" />
+      <Association Name="Seller_Sale" Member="Seller" ThisKey="SellerId" OtherKey="Id" Type="Seller" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sellers" Member="Sellers">
+    <Type Name="Seller">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Association Name="Seller_Sale" Member="Sales" ThisKey="Id" OtherKey="SellerId" Type="Sale" />
+    </Type>
+  </Table>
+</Database>

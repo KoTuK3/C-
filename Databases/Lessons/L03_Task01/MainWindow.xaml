@@ -1,0 +1,14 @@
+﻿<Window x:Class="L03_Task01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:L03_Task01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="634.536">
+    <Grid>
+        <ListBox Name="ListOfUsers"/>
+        <Button Name="CreateUser" Content="Create user" Margin="311,33,74,292" Click="Button_Click"/>
+        <Button Name="DeleteUser" Content="Delete user" Margin="311,153,74,173" Click="DeleteUser_Click"/>
+    </Grid>
+</Window>
