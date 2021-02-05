@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C14B16E-0EC6-43AE-9F53-40BB990BF635}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>L07_Task01</RootNamespace>
-    <AssemblyName>L07_Task01</AssemblyName>
+    <ProjectGuid>{DD169472-C4FE-462D-B4A0-0FF796160295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>L09_Task01_DAL</RootNamespace>
+    <AssemblyName>L09_Task01_DAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -52,9 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Initializer.cs" />
-    <Compile Include="Model1.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="EF\Barbershop.cs" />
+    <Compile Include="Entity\Barber.cs" />
+    <Compile Include="Entity\Client.cs" />
+    <Compile Include="Entity\Feedback.cs" />
+    <Compile Include="Entity\Schedule.cs" />
+    <Compile Include="Entity\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

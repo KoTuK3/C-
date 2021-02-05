@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C14B16E-0EC6-43AE-9F53-40BB990BF635}</ProjectGuid>
+    <ProjectGuid>{5BED3B8F-D4E6-475F-8E05-28032D3A6D12}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>L07_Task01</RootNamespace>
-    <AssemblyName>L07_Task01</AssemblyName>
+    <RootNamespace>L08_Task01</RootNamespace>
+    <AssemblyName>L08_Task01</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Initializer.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Airplane.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Flight.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
