@@ -11,6 +11,7 @@ namespace L11_Task01_DAL.EF
         public BookShop()
             : base("name=BookShop")
         {
+            Database.SetInitializer(new Initializer());
         }        
 
         public virtual DbSet<Book> Books { get; set; }

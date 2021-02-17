@@ -16,9 +16,9 @@ namespace L11_Task01_DAL.Models
 
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }
-        public int NextBookId { get; set; }
+        public int? NextBookId { get; set; }
         public Book NextBook { get; set; }
-        public int PrevBookId { get; set; }
+        public int? PrevBookId { get; set; }
         public Book PrevBook { get; set; }
 
         public virtual ICollection<Purchase> Purchases { get; set; }

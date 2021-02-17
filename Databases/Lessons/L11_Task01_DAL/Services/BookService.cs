@@ -15,6 +15,11 @@ namespace L11_Task01_DAL.Services
             _unitOfWork = new UnitOfWork();
         }
 
+        public IEnumerable<Book> GetBooks()
+        {
+            return _unitOfWork.BookRepository.Get(b => true);
+        }
+
         public Book GetBookByName(string name)
         {
             return _unitOfWork.BookRepository.Get()
